@@ -1,0 +1,21 @@
+query:
+  post:
+    summary: Enviar consulta al chatbot IA
+    operationId: processChatbotQuery
+    tags:
+      - Chatbot IA
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/chatbot/ChatbotRequest.json'
+    responses:
+      '200':
+        description: Respuesta de IA generada
+        content:
+          application/json:
+            schema:
+              $ref: '../components/schemas/chatbot/ChatbotResponse.json'
+      '401':
+        $ref: '../components/responses/UnauthorizedError.yaml'

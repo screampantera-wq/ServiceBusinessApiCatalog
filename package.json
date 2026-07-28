@@ -1,0 +1,13 @@
+{
+  "name": "service-business-api-catalog",
+  "version": "1.0.0",
+  "description": "Catalogo de APIs OpenAPI 3.0 para ServiceBusinessBank",
+  "scripts": {
+    "lint": "redocly lint openapi.yaml",
+    "bundle": "redocly bundle openapi.yaml -o dist/openapi-bundled.yaml",
+    "start": "redocly preview-docs openapi.yaml"
+  },
+  "devDependencies": {
+    "@redocly/cli": "^1.8.0"
+  }
+}

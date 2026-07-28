@@ -1,0 +1,41 @@
+login:
+  post:
+    summary: Inicio de sesion de usuario
+    operationId: authLogin
+    tags:
+      - Autenticacion
+    security: []
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/auth/LoginRequest.json'
+    responses:
+      '200':
+        description: Autenticacion exitosa
+        content:
+          application/json:
+            schema:
+              $ref: '../components/schemas/auth/LoginResponse.json'
+      '401':
+        $ref: '../components/responses/UnauthorizedError.yaml'
+
+register:
+  post:
+    summary: Registro de nuevo usuario
+    operationId: authRegister
+    tags:
+      - Autenticacion
+    security: []
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/auth/RegisterRequest.json'
+    responses:
+      '201':
+        description: Usuario registrado exitosamente
+      '400':
+        description: Peticion invalida o usuario ya existente

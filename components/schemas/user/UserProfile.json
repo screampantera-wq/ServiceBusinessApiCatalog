@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "example": 1
+    },
+    "fullName": {
+      "type": "string",
+      "example": "Juan Perez"
+    },
+    "email": {
+      "type": "string",
+      "example": "juan.perez@email.com"
+    },
+    "username": {
+      "type": "string",
+      "example": "juanperez"
+    }
+  }
+}

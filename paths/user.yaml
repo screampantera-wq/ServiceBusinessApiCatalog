@@ -1,0 +1,15 @@
+profile:
+  get:
+    summary: Obtener perfil del usuario
+    operationId: getUserProfile
+    tags:
+      - Usuario
+    responses:
+      '200':
+        description: Perfil de usuario obtenido
+        content:
+          application/json:
+            schema:
+              $ref: '../components/schemas/user/UserProfile.json'
+      '401':
+        $ref: '../components/responses/UnauthorizedError.yaml'

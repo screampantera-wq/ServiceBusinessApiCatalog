@@ -1,0 +1,9 @@
+description: Acceso no autorizado o token JWT invalido/expirado
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Token invalido o expirado"

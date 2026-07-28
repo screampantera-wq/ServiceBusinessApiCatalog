@@ -1,0 +1,35 @@
+queries:
+  get:
+    summary: Consultar historial financiero
+    operationId: getFinancialQueries
+    tags:
+      - Operaciones Financieras
+    responses:
+      '200':
+        description: Historial cargado correctamente
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../components/schemas/financial/FinancialTransaction.json'
+      '401':
+        $ref: '../components/responses/UnauthorizedError.yaml'
+
+categories:
+  get:
+    summary: Obtener arbol de categorias
+    operationId: getFinancialCategories
+    tags:
+      - Operaciones Financieras
+    responses:
+      '200':
+        description: Arbol de categorias obtenido
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../components/schemas/financial/FinancialCategory.json'
+      '401':
+        $ref: '../components/responses/UnauthorizedError.yaml'

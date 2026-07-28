@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    },
+    "expiresIn": {
+      "type": "integer",
+      "example": 3600
+    },
+    "user": {
+      "$ref": "../user/UserProfile.json"
+    }
+  }
+}

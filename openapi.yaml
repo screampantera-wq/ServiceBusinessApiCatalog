@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  title: ServiceBusinessApiCatalog
+  description: Catalogo modularizado de APIs RESTful para la plataforma financiera ServiceBusinessBank.
+  version: 1.0.0
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  contact:
+    name: Architecture Team
+    email: dev@servicebusinessbank.com
+
+servers:
+  - url: https://api.servicebusinessbank.com/v1
+    description: Entorno de Produccion
+  - url: http://{host}:{port}/v1
+    description: Entorno de Desarrollo Local (.NET Core)
+    variables:
+      host:
+        default: localhost
+        description: Host de desarrollo
+      port:
+        default: "5000"
+        description: Puerto de la API en .NET
+
+security:
+  - BearerAuth: []
+
+paths:
+  /auth/login:
+    $ref: './paths/auth.yaml#/login'
+  /auth/register:
+    $ref: './paths/auth.yaml#/register'
+  /user/profile:
+    $ref: './paths/user.yaml#/profile'
+  /financial/queries:
+    $ref: './paths/financial.yaml#/queries'
+  /financial/categories:
+    $ref: './paths/financial.yaml#/categories'
+  /payments/checkout:
+    $ref: './paths/banking.yaml#/checkout'
+  /chatbot/query:
+    $ref: './paths/chatbot.yaml#/query'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  responses:
+    UnauthorizedError:
+      $ref: './components/responses/UnauthorizedError.yaml'

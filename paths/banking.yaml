@@ -1,0 +1,23 @@
+checkout:
+  post:
+    summary: Procesar cobro de servicio
+    operationId: processPaymentCheckout
+    tags:
+      - Servicios y Pagos
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/banking/CheckoutRequest.json'
+    responses:
+      '200':
+        description: Pago procesado correctamente
+        content:
+          application/json:
+            schema:
+              $ref: '../components/schemas/banking/CheckoutResponse.json'
+      '400':
+        description: Error al procesar el pago
+      '401':
+        $ref: '../components/responses/UnauthorizedError.yaml'

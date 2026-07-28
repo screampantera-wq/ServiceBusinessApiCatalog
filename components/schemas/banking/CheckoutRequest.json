@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["serviceId", "paymentMethodToken", "amount"],
+  "properties": {
+    "serviceId": {
+      "type": "integer",
+      "example": 101
+    },
+    "paymentMethodToken": {
+      "type": "string",
+      "example": "tok_visa_4242"
+    },
+    "amount": {
+      "type": "number",
+      "format": "float",
+      "example": 150.00
+    }
+  }
+}

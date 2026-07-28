@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": ["fullName", "email", "username", "password"],
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "example": "Juan Perez"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "example": "juan.perez@email.com"
+    },
+    "username": {
+      "type": "string",
+      "example": "juanperez"
+    },
+    "password": {
+      "type": "string",
+      "format": "password",
+      "example": "SecurePass2026!"
+    }
+  }
+}

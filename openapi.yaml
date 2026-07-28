@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: ServiceBusinessApiCatalog
-  description: Catalogo modularizado de APIs RESTful para la plataforma financiera ServiceBusinessBank.
+  description: Catalogo modularizado de APIs RESTful para la plataforma financiera ServiceBusinessBank Proyecto Personal.
   version: 1.0.0
   license:
     name: MIT
